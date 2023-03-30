@@ -12,8 +12,6 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("api/v1/customer")
 @CrossOrigin
 public class CustomerController {
-
-
     @Autowired
     private CustomerService customerService;
 
@@ -24,7 +22,6 @@ public class CustomerController {
         customerService.saveCustomer(customerDTO);
         return"saved";
     }
-
     @PutMapping(path = "/update")
     public String updateCustomer(@RequestBody CustomerDTO customerDTO) {
 
